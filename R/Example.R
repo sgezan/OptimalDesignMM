@@ -17,9 +17,9 @@ Oldmatdf<-matdf
 print(OldScore)
 iter<-2000
 for (i in 1:iter) {
- newmatdf <- SwapMethods(matdf,pairs=1,swapmethod="within")
+ #newmatdf <- SwapMethods(matdf,pairs=1,swapmethod="within")
  #newmatdf <- SwapMethods(matdf,pairs=4,swapmethod="across")
- #newmatdf <- SwapMethods(Oldmatdf,pairs=2,swapmethod="any")
+ newmatdf <- SwapMethods(Oldmatdf,pairs=2,swapmethod="any")
  NewScore <- VarCov_bFtR(matdf=newmatdf,criteria="A",Ginv,Rinv,K)$OptimScore # K is provided
  if(NewScore < OldScore){
    OldScore <- NewScore
